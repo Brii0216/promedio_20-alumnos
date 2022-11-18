@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    
+    int notas_alumnos[20];
+    int f, aprobados=0, desaprobados=0;
+    float promedio, suma;
+    
+    for(f=0;f<20;f++){
+        printf("Ingresar la nota N° %d: ", f);
+        scanf("%d", &notas_alumnos[f]);
+    }
+    for(f=0;f<20;f++){
+        if(notas_alumnos[f]>=7){
+            aprobados++;
+        }else{ desaprobados++;
+        }
+    }
+    printf("La cantidad de aprobados es %d \n", aprobados);
+    printf("La cantidad de desaprobados es %d \n", desaprobados);
+    
+    for(f=0;f<20;f++){
+        suma=suma+notas_alumnos[f];
+    }
+        promedio=suma/20;
+        printf("el promedio del curso es: %f",promedio);
+    return 0;
+}
